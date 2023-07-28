@@ -58,6 +58,10 @@ const units = [
         name: "shacoba",
         jobs: without_unused_jobs(female_all_jobs),
     },
+    {
+        name: "ごーすと。",
+        jobs: without_unused_jobs(female_all_jobs),
+    },
 ]
 
 
