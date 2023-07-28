@@ -1,13 +1,14 @@
 
 :root {
-    /*  */
+    --fft-window-text-font-color: rgb(50, 40, 20);
+
     --fft-window-text-font-family: '源暎ゴシックP', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     --fft-window-title-font-family: 'Footlight MT', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 
-    --fft-window-border-color: rgb(50,50,50);
-    --fft-window-shadow-color: rgb(50,50,50);
+    --fft-window-border-color: rgb(50, 40, 20);
+    --fft-window-shadow-color: rgb(50, 40, 20);
     
-    --fft-window-text-shadow-color: lightgrey;
+    --fft-window-text-shadow-color: rgb(150, 140, 120);
     --fft-window-title-shadow-color: black;
 }
 
@@ -34,8 +35,9 @@
     padding-left: 10px;
     padding-right: 10px;
     font-family: var(--fft-window-text-font-family);
-    text-shadow: var(--fft-window-text-shadow-color) 0.5px 0.5px 0.5px;
+    text-shadow: var(--fft-window-text-shadow-color) 1px 1px 0px;
     font-weight: 600;
+    color: var(--fft-window-text-font-color);
 }
 .fft-window.with-title {
     padding-top: 25px;
