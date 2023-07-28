@@ -18,7 +18,7 @@
             unit_dom.append(unit_name_dom)
             let unit_build_dom = document.createElement("div")
             unit_build_dom.classList = "unit_build"
-            unit_build_dom.innerText = `${unit.job} / ${unit.action}`
+            unit_build_dom.innerText = unit.action ? `${unit.job} / ${unit.action}` : unit.job
             unit_dom.append(unit_build_dom)
             let unit_restriction_dom = document.createElement("div")
             unit_restriction_dom.classList = "unit_restriction"
@@ -37,7 +37,7 @@ function make_party(units, num) {
         let job_id = shuffle(unit.jobs)[0]
         let job = jobs[job_id].name
         let action_id = shuffle(unit.jobs.filter(x => x != job_id))[0]
-        let action = jobs[action_id].action
+        let action = (job_id !== "mime") ? jobs[action_id].action : null
         let restriction = shuffle(restrictions)[0]
         return { name: unit.name, job: job, action: action, restriction: restriction }
     })
